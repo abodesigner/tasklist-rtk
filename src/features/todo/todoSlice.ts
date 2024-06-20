@@ -4,7 +4,7 @@ import type { ITodo, ITodoState } from '../../interfaces/todo'
 
 
 // Load tasks from LocalStorage
-const loadSavedTasks = () => {
+function loadSavedTasks() {
     const data = localStorage.getItem('todos');
     const json = JSON.parse(data || "")
     if (json) {
