@@ -1,26 +1,17 @@
 import AddTodoForm from "./components/AddTodoForm";
 import { useTranslation } from "react-i18next";
 import { supportedLngs } from "./i18n";
+import useLocalizeDocumentAttributes from "./rtlSupport"
 
 
 function App() {
 
   const { i18n } = useTranslation();
-  // const [currentLanguage, setCurrentLanguage] = useState(language)
 
-  // const handleChangeLanguage = () => {
-  //   const newLanguage = currentLanguage === "en" ? "ar" : "en";
-  //   setCurrentLanguage(newLanguage);
-  //   changeLanguage(newLanguage);
-  // }
+  useLocalizeDocumentAttributes();
 
   return (
-    <div className="bg-white h-screen flex flex-col items-center justify-center">
-
-      {/* <button type="button" className="bg-emerald-500 p-2 rounded text-white my-2"
-              onClick={handleChangeLanguage}>
-        Language <span>({currentLanguage})</span>
-      </button> */}
+    <div className="bg-white h-screen flex flex-col items-center justify-center">ف
 
       <select
         className="px-4 py-2"
