@@ -11,7 +11,7 @@ function App() {
   useLocalizeDocumentAttributes();
 
   return (
-    <div className="bg-white h-screen flex flex-col items-center justify-center">ف
+    <div className="bg-white h-screen flex flex-col items-center justify-center">
 
       <select
         className="px-4 py-2"
