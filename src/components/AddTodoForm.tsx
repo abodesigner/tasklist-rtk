@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux"
 import { addTodo } from "../features/todo/todoSlice";
 import toast, { Toaster } from 'react-hot-toast';
 import TodoList from "./TodoList";
+import TaskHeader from "./TaskHeader";
 
 const AddTodoForm = () => {
 
@@ -27,9 +28,7 @@ const AddTodoForm = () => {
 
     return (
         <div className="my-8 shadow-xl border">
-            <h1 className="text-center font-bold py-2 bg-sky-600 text-white w-[full] mb-8 text-2xl">
-                Tasks List
-            </h1>
+            <TaskHeader />
             <form className="px-4 mb-4 font-opensans" onSubmit={addTodoHandler}>
                 <input
                     type="text"
