@@ -5,8 +5,11 @@ import { addTodo } from "../features/todo/todoSlice";
 import toast, { Toaster } from 'react-hot-toast';
 import TodoList from "./TodoList";
 import TaskHeader from "./TaskHeader";
+import { useTranslation } from "react-i18next";
 
 const AddTodoForm = () => {
+
+    const { t } = useTranslation();
 
     const [todoInput, setTodoInput] = useState<string>('')
 
@@ -35,13 +38,13 @@ const AddTodoForm = () => {
                     className="outline-none bg-transparent
         border border-gray-500 p-2 w-[500px] text-gray mb-4 rounded
         placeholder:text-gray-300"
-                    placeholder="What would you like to do?"
+                    placeholder={t('placeholder_val')}
                     value={todoInput}
                     onChange={(e) => setTodoInput(e.target.value)}
                 />
 
                 <button className="bg-gray-700 border-none p-2
-                 text-white cursor-pointer rounded ml-2">
+                 text-white cursor-pointer rounded ltr:ml-2 rtl:mr-2">
                     <IoIosAddCircle />
                 </button>
                 <Toaster position="bottom-right" />

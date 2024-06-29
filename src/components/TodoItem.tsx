@@ -5,7 +5,7 @@ const TodoItem = ({ todo, handleToggleTodo, handleTodoRemove }: ITodoItem) => {
     return (
 
         <div className="flex justify-between items-center mb-2 border border-gray-200 w-[500px] outline-none bg-transparent p-2 text-gray rounded">
-            <div className="flex justify-between items-center space-x-4">
+            <div className="flex justify-between items-center">
 
                 <input
                     type="checkbox"
@@ -15,7 +15,7 @@ const TodoItem = ({ todo, handleToggleTodo, handleTodoRemove }: ITodoItem) => {
         placeholder:text-gray-300"
                 />
 
-                <p className={`text-gray-700 ${todo.isDone ? "line-through" : null}`}>{todo.text.trim().toLowerCase()}</p>
+                <p className={`text-gray-700 ${todo.isDone ? "line-through" : null} ltr:ml-4 rtl:mr-4`}>{todo.text.trim().toLowerCase()}</p>
 
             </div>
             <button className="p-2 text-red-500 rounded hover:bg-red-500 hover:text-white"
