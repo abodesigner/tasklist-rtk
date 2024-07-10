@@ -2,6 +2,7 @@ import { MdDelete } from "react-icons/md";
 import { ITodoItem } from "../interfaces/todo"
 
 const TodoItem = ({ todo, handleToggleTodo, handleTodoRemove }: ITodoItem) => {
+
     return (
 
         <div className="flex justify-between items-center mb-2 border border-gray-200 w-[500px] outline-none bg-transparent p-2 text-gray rounded">

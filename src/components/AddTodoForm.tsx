@@ -19,7 +19,8 @@ const AddTodoForm = () => {
     // Add todo handler
     const addTodoHandler = (e: React.ChangeEvent<HTMLFormElement>) => {
         e.preventDefault()
-        if (todoInput.trim().length === 0) return toast.error("Todo can't be empty")
+
+        if (todoInput.trim().length === 0) return toast.error(t("empty_msg"));
 
         // Dispatch the add todo action from the reducer
         dispatch(addTodo(todoInput))
